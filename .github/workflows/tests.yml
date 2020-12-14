@@ -45,6 +45,9 @@ jobs:
 #
     - name: Run ECS check
       run: vendor/bin/ecs check src tests
+#
+    - name: Run rector
+      run: vendor/bin/rector process src/ examples/ tests/ --dry-run
 
     - name: Run phpstan check
       run: vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=512M
