@@ -4,3 +4,5 @@ parameters:
     - tests
   level: 8
   checkMissingIterableValueType: false
+  ignoreErrors:
+    - '#Call to an undefined method Pingen\\Models\\Letter\\LetterInputPOSTAttributes::setFileUrl\(\)\.#'
