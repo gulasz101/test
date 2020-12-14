@@ -1,6 +1,7 @@
 {
     "name": "pingencom/pingenv2",
     "type": "library",
+    "description": "php integration for pingen.",
     "require": {
         "php": "^7.4",
         "ext-json": "*",
