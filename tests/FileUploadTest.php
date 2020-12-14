@@ -22,17 +22,17 @@ class FileUploadTest extends DummyTest
 
         $endpoint->uploadFile(
             new FileUploadDetails(
-                [
-                    'data' => [
+                array(
+                    'data' => array(
                         'id' => 'id',
                         'type' => 'file_uploads',
-                        'attributes' => [
+                        'attributes' => array(
                             'url' => 'http://s3.local',
                             'url_signature' => 'superhashedstring',
-                            'expires_at' => Carbon::now()->subMinute()
-                        ]
-                    ]
-                ]
+                            'expires_at' => Carbon::now()->subMinute(),
+                        ),
+                    ),
+                )
             ),
             'lorem ipsum'
         );

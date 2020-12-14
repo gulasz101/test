@@ -29,19 +29,26 @@ class LetterInputPOSTAttributes extends Input
     protected $file;
 
     protected string $file_original_name;
+
     protected string $file_url;
+
     protected string $file_url_signature;
+
     protected string $address_position;
+
     protected bool $auto_send;
+
     protected string $delivery_product;
+
     protected string $print_mode;
+
     protected string $print_spectrum;
 
     /**
      * @param resource|string $file File contents or path.
      * @return $this
      */
-    public function attachFile($file): LetterInputPOSTAttributes
+    public function attachFile($file): self
     {
         $this->file = $file;
         return $this;
@@ -51,7 +58,7 @@ class LetterInputPOSTAttributes extends Input
      * @param Pingen $provider
      * @return LetterInputPOSTAttributes
      */
-    public function setProvider(Pingen $provider): LetterInputPOSTAttributes
+    public function setProvider(Pingen $provider): self
     {
         $this->provider = $provider;
         return $this;

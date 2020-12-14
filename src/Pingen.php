@@ -179,7 +179,7 @@ class Pingen extends AbstractProvider
 
     public function setAccessTokenFromString(string $accessToken): self
     {
-        $expiresAt = (string)Str::of((string)base64_decode(str_replace(array('-', '_'), array('+', '/'), $accessToken), true))
+        $expiresAt = (string) Str::of((string) base64_decode(str_replace(array('-', '_'), array('+', '/'), $accessToken), true))
             ->match('/(?<=exp\"\:)(.*)(?=\,\"sub)/');
 
         if (! $expiresAt) {

@@ -50,7 +50,7 @@ class LettersEndpoint extends Endpoint
                 'letters',
                 $attributes
             )
-            ->json()
+                ->json()
         );
     }
 }

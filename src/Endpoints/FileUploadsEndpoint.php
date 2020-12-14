@@ -57,7 +57,9 @@ class FileUploadsEndpoint extends Endpoint
         }
 
         (new Factory())
-            ->withOptions(['body' => $fileToUpload])
+            ->withOptions(array(
+                'body' => $fileToUpload,
+            ))
             ->put($details->data->attributes->url)
             ->throw();
     }
