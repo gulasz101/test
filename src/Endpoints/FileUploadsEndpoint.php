@@ -40,7 +40,7 @@ class FileUploadsEndpoint extends Endpoint
         }
 
         $fileToUpload = tmpfile();
-        if (!is_resource($fileToUpload)) {
+        if (! is_resource($fileToUpload)) {
             throw new \RuntimeException('Cannot create tmp file.');
         }
         switch (true) {
@@ -49,7 +49,7 @@ class FileUploadsEndpoint extends Endpoint
                 break;
             case is_file($file):
                 $tmp = fopen($file, 'r');
-                if (!is_resource($tmp)) {
+                if (! is_resource($tmp)) {
                     throw new \RuntimeException('Cannot open file with given path: ' . $fileToUpload);
                 }
                 stream_copy_to_stream($tmp, $fileToUpload);
